@@ -78,9 +78,12 @@ body {
     height: 2.1rem;
     font-size: 1.8rem; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
+    border-radius: 100%;
+    transition: 0.4s;
   }
   
   /* White background on mouse-over */
   .btn:hover {
-    background-color: lightgray;
+    background-color: black;
+    color: white;
   }
