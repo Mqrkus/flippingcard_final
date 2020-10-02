@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Peddana', serif;
+}
+
+body {
+    background-color: #333;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    cursor: pointer;
+    width: 340px;
+    height: 480px;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.5s linear;
+}
+
+.front img {
+    height: 100%;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.front {
+    height: 100%;
+}
+
+.back {
+    background-color: #ffffff;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.back-content {
+   color: black;
+   text-align: center;
+   width: 100%;
+}
+
+.sm {
+    margin: 2rem 0;
+}
+
+.sm a {
+    display: inline-block;
+    width: 2.1rem;
+    height: 2.1rem;
+    font-size: 1.8rem;
+    color: black;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.btn {
+    background-color: white; /* White background */
+    border: none; /* Remove borders */
+    color: black; /* Black text */
+    width: 2.1rem;
+    height: 2.1rem;
+    font-size: 1.8rem; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
+  
+  /* White background on mouse-over */
+  .btn:hover {
+    background-color: lightgray;
+  }
